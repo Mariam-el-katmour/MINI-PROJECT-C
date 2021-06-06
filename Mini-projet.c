@@ -209,7 +209,7 @@ void modifier_voiture(){
  	voiture v;
  	int numr;
  	char a;
- 	printf("Saisie le id de la voiture a supprimé : ");
+ 	printf("Saisie le id de la voiture a supprimÃ© : ");
  	scanf("%d",&numr);
  	fflush(stdin);
  	if(Recherche_voiture(numr)==1){
@@ -220,7 +220,6 @@ void modifier_voiture(){
  			FILE *fichier,*fil;
         	fichier=fopen("Voitures.txt","r");
         	fil=fopen("nouveaufich2.txt","w");
-        	//while(!feof(fichier)){
 
             char buff2[1000];
             while(fgets(buff2, 1000, fichier)){
@@ -251,7 +250,7 @@ void modifier_voiture(){
 			printf("suppression effectuee avec success !");
 		 }
 		else{
-			printf(" Voiture non supprimée");
+			printf(" Voiture non supprimÃ©e");
 		}
 	 }
 	 else printf("l'Id de la voiture n'existe pas");
@@ -372,7 +371,7 @@ void modifier_client(){
                 c.telephone=atoi(domaine);
                 if(numr==c.idClient){
                     c.idClient=numr;
-                    printf("Voulez vous modifier quel champ ? 1/nom_client | 2/prenom_client| 3/CIN|4/Adresse|5/N°_telephone\n ");
+                    printf("Voulez vous modifier quel champ ? 1/nom_client | 2/prenom_client| 3/CIN|4/Adresse|5/NÂ°_telephone\n ");
                    scanf("%d",&choix);
                    switch(choix){
                    	case 1:
@@ -458,7 +457,7 @@ void supprimer_client(){
 			printf("suppression effectuee avec success");
 		 }
 		else{
-			printf("client non supprimée");
+			printf("client non supprimÃ©e");
 		}
 	 }
 	 else printf("l'Id de client saisie n'existe pas");
@@ -488,7 +487,7 @@ void visualiser_contrat(){
 	float numCont;
 	char debut[9],fin[9],buf[1000];
 	fichier=fopen("ContratsLocations.txt","r");
-	printf("donnez le numero de contract à voire :\t");
+	printf("donnez le numero de contract Ã  voire :\t");
     scanf("%f",&numCont);
     if (recherche_contrat(numCont)==1){
         if(fichier!=NULL){
@@ -501,7 +500,7 @@ void visualiser_contrat(){
                     domaine = strtok(NULL, "|");
                     printf("l'Id du client est : \t\t%d\n",atoi(domaine));
                     domaine = strtok(NULL, "|");
-                    printf("La date de début est : \t\t%s\n",domaine);
+                    printf("La date de dÃ©but est : \t\t%s\n",domaine);
                     domaine = strtok(NULL, "|");
                     printf("La date de fin est : \t\t%s\n",domaine);
                     domaine = strtok(NULL, "|");
@@ -592,7 +591,7 @@ void louer_voiture(){
                         p=v.prixJour;
                     }
                     else{
-                        printf("La voitures est déjà réservée\n");
+                        printf("La voitures est dÃ©jÃ  rÃ©servÃ©e\n");
                         p=-1;
                     }
             }
@@ -603,7 +602,7 @@ void louer_voiture(){
         remove("Voitures.txt");
         rename("cpy.txt","Voitures.txt");
         if (p!=-1){
-            printf("taper la durée(jours) de location  :");
+            printf("taper la durÃ©e(jours) de location  :");
             scanf("%d",&d);
             p= p*d;
             printf("le prix de location est : %d\n",p);
@@ -682,7 +681,7 @@ void Retourner_voiture(){
 
  	float numr;
  	char a;
- 	printf("entrez numero de contrat à retourner :\t ");
+ 	printf("entrez numero de contrat Ã  retourner :\t ");
  	scanf("%f",&numr);
  	fflush(stdin);
  	if(recherche_contrat(numr)==1){
@@ -722,10 +721,10 @@ void Retourner_voiture(){
 			remove("Voitures.txt");
 			rename("cpy.txt","Voitures.txt");
 
-			printf("la Voiture est retournée");
+			printf("la Voiture est retournÃ©e");
 		 }
 		else{
-			printf("contrat non supprimé");
+			printf("contrat non supprimÃ©");
 		}
 	 }
 	 else printf("Ce numero de contrat n'existe pas");
@@ -828,7 +827,7 @@ int nbrjours,prixjour,choix;
 void supprimer_contrat(){
   	float numr;
  	char a;
- 	printf("entrez numero de contrat a supperimé :\t ");
+ 	printf("entrez numero de contrat a supperimÃ© :\t ");
  	scanf("%f",&numr);
  	fflush(stdin);
  	if(recherche_contrat(numr)==1){
@@ -840,7 +839,7 @@ void supprimer_contrat(){
             printf("suppression effectuee avec success");
 		 }
 		else{
-			printf("contrat non supprimée");
+			printf("contrat non supprimÃ©e");
 		}
 	 }
 	 else printf("le numero de contrat n'existe pas");
